@@ -154,6 +154,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/pelme/htpy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -187,6 +199,18 @@
     </a>
     htpy - HTML in Python
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pelme/htpy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -291,9 +315,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#loopsiterating-over-children" class="md-nav__link">
+  <a href="#loops-iterating-over-children" class="md-nav__link">
     <span class="md-ellipsis">
-      Loops/iterating over children
+      Loops / iterating over children
     </span>
   </a>
   
@@ -454,9 +478,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#loopsiterating-over-children" class="md-nav__link">
+  <a href="#loops-iterating-over-children" class="md-nav__link">
     <span class="md-ellipsis">
-      Loops/iterating over children
+      Loops / iterating over children
     </span>
   </a>
   
@@ -568,6 +592,9 @@
                 
                   
 
+  
+  
+
 
 <h1 id="usage">Usage</h1>
 <h2 id="elements">Elements</h2>
@@ -590,7 +617,7 @@ be strings, markup, other elements or lists/iterators.</p>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">&lt;h1&gt;Welcome to my site!&lt;/h1&gt;</span>
 </span></code></pre></div></p>
 <p>Strings are automatically escaped to avoid <a href="https://owasp.org/www-community/attacks/xss/">XSS
-vulnerabilites</a>. It is convenient
+vulnerabilities</a>. It is convenient
 and safe to directly insert variable data via f-strings:</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">h1</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">user_supplied_name</span> <span class="o">=</span> <span class="s2">&quot;bobby &lt;/h1&gt;&quot;</span>
@@ -614,8 +641,8 @@ and safe to directly insert variable data via f-strings:</p>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="k">if</span> <span class="n">error</span> <span class="k">else</span> <span class="kc">None</span><span class="p">])</span>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="go">&lt;div&gt;&lt;b&gt;Enter a valid email address.&lt;/b&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<h3 id="loopsiterating-over-children">Loops/iterating over children</h3>
-<p>You can pass an list, tuple or generator to generate multiple children:</p>
+<h3 id="loops-iterating-over-children">Loops / iterating over children</h3>
+<p>You can pass a list, tuple or generator to generate multiple children:</p>
 <div class="language-pycon highlight"><span class="filename">Iterate over a generator</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ul</span><span class="p">[(</span><span class="n">li</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;abc&quot;</span><span class="p">)])</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">&lt;ul&gt;&lt;li&gt;a&lt;/li&gt;&lt;li&gt;b&lt;/li&gt;&lt;li&gt;c&lt;/li&gt;&lt;/ul&gt;</span>
@@ -679,7 +706,7 @@ that looks like a CSS selector can be used to quickly define id and classes:</p>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">&lt;div id=&quot;myid&quot; class=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
 <h3 id="attributes-as-dict">Attributes as dict</h3>
-<p>Attributes can also be specified by a <code>dict</code>. This is useful when using
+<p>Attributes can also be specified as a <code>dict</code>. This is useful when using
 attributes that are reserved Python keywords (like <code>for</code> or <code>class</code>), when the
 attribute name contains a dash (<code>-</code>) or when you want to define attributes
 dynamically.</p>
@@ -693,8 +720,8 @@ dynamically.</p>
 </span></code></pre></div>
 <h3 id="boolean-attributes">Boolean attributes</h3>
 <p>In HTML, boolean attributes such as <code>disabled</code> are considered "true" when they
-exists. Specifying an attribute as <code>True</code> will make it appear (without a value).
-<code>False</code> will make it hidden. This is useful and brings to semantics of <code>bool</code> to
+exist. Specifying an attribute as <code>True</code> will make it appear (without a value).
+<code>False</code> will make it hidden. This is useful and brings the semantics of <code>bool</code> to
 HTML.</p>
 <div class="language-pycon highlight"><span class="filename">True bool attribute</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>

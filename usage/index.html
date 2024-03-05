@@ -597,14 +597,13 @@
 
 
 <h1 id="usage">Usage</h1>
-<h2 id="elements">Elements</h2>
-<p>Elements are imported directly from the <code>htpy</code> module as their name:</p>
+<p>Elements are imported directly from the <code>htpy</code> module as their name. HTML attributes are specified by parenthesis (<code>()</code> / "call"). Children are specified using square brackets (<code>[]</code> / "getitem").</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">&gt;&gt; print(div)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">&lt;div&gt;&lt;/div&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;hi&quot;</span><span class="p">)[</span><span class="s2">&quot;Hello!&quot;</span><span class="p">])</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">&lt;div id=&quot;hi&quot;&gt;Hello!&lt;/div&gt;</span>
 </span></code></pre></div>
-<p>Children are specified using the <code>[]</code> "getitem" syntax. Children can
-be strings, markup, other elements or lists/iterators.</p>
+<h2 id="elements">Elements</h2>
+<p>Children can be strings, markup, other elements or lists/iterators.</p>
 <p>Elements can be arbitrarily nested:
 <div class="language-pycon highlight"><span class="filename">Nested elements</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">article</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">p</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">section</span><span class="p">[</span><span class="n">article</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="s2">&quot;Lorem ipsum&quot;</span><span class="p">]]])</span>

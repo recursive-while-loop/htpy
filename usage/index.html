@@ -402,6 +402,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#conditionally-mixing-css-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionally mixing CSS classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#combining-modes" class="md-nav__link">
     <span class="md-ellipsis">
       Combining modes
@@ -565,6 +574,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#conditionally-mixing-css-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionally mixing CSS classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#combining-modes" class="md-nav__link">
     <span class="md-ellipsis">
       Combining modes
@@ -689,52 +707,70 @@ library. markupsafe is a dependency of htpy and is automatically installed:</p>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="n">for_</span><span class="o">=</span><span class="s2">&quot;myfield&quot;</span><span class="p">))</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">&lt;label for=&quot;myfield&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
+<p>Attributes that contains dashes <code>-</code> can be specified using underscores:
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">form</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">form</span><span class="p">(</span><span class="n">hx_post</span><span class="o">=</span><span class="s2">&quot;/foo&quot;</span><span class="p">))</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">&lt;form hx-post=&quot;/foo&quot;&gt;&lt;/form&gt;</span>
+</span></code></pre></div></p>
+<p>If you need attributes</p>
 <h3 id="idclass-shorthand">id/class shorthand</h3>
 <p>Defining <code>id</code> and <code>class</code> attributes is common when writing HTML. A string shorthand
 that looks like a CSS selector can be used to quickly define id and classes:</p>
-<div class="language-pycon highlight"><span class="filename">Define id</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;#myid&quot;</span><span class="p">))</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">&lt;div id=&quot;myid&quot;&gt;&lt;/div&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Define id</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;#myid&quot;</span><span class="p">))</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">&lt;div id=&quot;myid&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<div class="language-pycon highlight"><span class="filename">Define multiple classes</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;.foo.bar&quot;</span><span class="p">))</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">&lt;div id=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Define multiple classes</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;.foo.bar&quot;</span><span class="p">))</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">&lt;div id=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<div class="language-pycon highlight"><span class="filename">Combining both id and classes</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">))</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">&lt;div id=&quot;myid&quot; class=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Combining both id and classes</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">))</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">&lt;div id=&quot;myid&quot; class=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
 <h3 id="attributes-as-dict">Attributes as dict</h3>
 <p>Attributes can also be specified as a <code>dict</code>. This is useful when using
 attributes that are reserved Python keywords (like <code>for</code> or <code>class</code>), when the
 attribute name contains a dash (<code>-</code>) or when you want to define attributes
 dynamically.</p>
-<div class="language-pycon highlight"><span class="filename">Using an attribute with a dash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">({</span><span class="s2">&quot;data-foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">}))</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">&lt;div data-foo=&quot;bar&quot;&gt;&lt;/div&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Using an attribute with a dash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">({</span><span class="s2">&quot;data-foo&quot;</span><span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">}))</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="go">&lt;div data-foo=&quot;bar&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<div class="language-pycon highlight"><span class="filename">Using an attribute with a reserved keyword</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">label</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">({</span><span class="s2">&quot;for&quot;</span><span class="p">:</span> <span class="s2">&quot;myfield&quot;</span><span class="p">}))</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="go">&lt;label for=&quot;myfield&quot;&gt;&lt;/label&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Using an attribute with a reserved keyword</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">label</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">({</span><span class="s2">&quot;for&quot;</span><span class="p">:</span> <span class="s2">&quot;myfield&quot;</span><span class="p">}))</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">&lt;label for=&quot;myfield&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
 <h3 id="boolean-attributes">Boolean attributes</h3>
 <p>In HTML, boolean attributes such as <code>disabled</code> are considered "true" when they
 exist. Specifying an attribute as <code>True</code> will make it appear (without a value).
 <code>False</code> will make it hidden. This is useful and brings the semantics of <code>bool</code> to
 HTML.</p>
-<div class="language-pycon highlight"><span class="filename">True bool attribute</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">&lt;button disabled&gt;&lt;/button&gt;</span>
+<div class="language-pycon highlight"><span class="filename">True bool attribute</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">&lt;button disabled&gt;&lt;/button&gt;</span>
 </span></code></pre></div>
-<div class="language-pycon highlight"><span class="filename">False bool attribute</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">&lt;button&gt;&lt;/button&gt;</span>
+<div class="language-pycon highlight"><span class="filename">False bool attribute</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="go">&lt;button&gt;&lt;/button&gt;</span>
+</span></code></pre></div>
+<h3 id="conditionally-mixing-css-classes">Conditionally mixing CSS classes</h3>
+<p>To make it easier to mix CSS classes, the <code>class</code> attribute
+accepts a list of class names or a dict. Falsey values will be ignored.</p>
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">is_primary</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;btn&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;btn-primary&quot;</span><span class="p">:</span> <span class="n">is_primary</span><span class="p">}]))</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="go">&lt;button class=&quot;btn btn-primary&quot;&gt;&lt;/button&gt;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">is_primary</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;btn&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;btn-primary&quot;</span><span class="p">:</span> <span class="n">is_primary</span><span class="p">}]))</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="go">&lt;button class=&quot;btn&quot;&gt;&lt;/button&gt;</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="gp">&gt;&gt;&gt;</span>
 </span></code></pre></div>
 <h3 id="combining-modes">Combining modes</h3>
 <p>Attributes via id/class shorthand, keyword arguments and dictionary can be combined:</p>
-<div class="language-pycon highlight"><span class="filename">Specifying attribute via multiple arguments</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htyp</span> <span class="kn">import</span> <span class="n">label</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="s2">&quot;somefield&quot;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;myname&quot;</span><span class="p">,))</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="go">&lt;label id=&quot;myid&quot; class=&quot;foo bar&quot; for=&quot;somefield&quot; name=&quot;myname&quot;&gt;&lt;/label&gt;</span>
+<div class="language-pycon highlight"><span class="filename">Specifying attribute via multiple arguments</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htyp</span> <span class="kn">import</span> <span class="n">label</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="s2">&quot;somefield&quot;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;myname&quot;</span><span class="p">,))</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">&lt;label id=&quot;myid&quot; class=&quot;foo bar&quot; for=&quot;somefield&quot; name=&quot;myname&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
 
 

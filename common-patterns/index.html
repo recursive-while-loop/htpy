@@ -327,9 +327,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-wrappers-for-ui-components" class="md-nav__link">
+  <a href="#ui-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating wrappers for UI components
+      UI components
     </span>
   </a>
   
@@ -448,9 +448,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-wrappers-for-ui-components" class="md-nav__link">
+  <a href="#ui-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating wrappers for UI components
+      UI components
     </span>
   </a>
   
@@ -534,7 +534,7 @@ components, you may create a <code>components</code> package instead.</p>
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>        <span class="p">],</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="p">)</span>
 </span></code></pre></div>
-<h2 id="creating-wrappers-for-ui-components">Creating wrappers for UI components</h2>
+<h2 id="ui-components">UI components</h2>
 <p>Creating higher level wrappers for common UI components can be a good idea to reduce repitition.</p>
 <p>Wrapping <a href="https://getbootstrap.com/docs/4.0/components/modal/">Bootstrap Modal</a> could be achieved with a function like this:</p>
 <div class="language-py highlight"><span class="filename">Creating wrapper for Bootstrap Modal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">markupsafe</span> <span class="kn">import</span> <span class="n">Markup</span>
@@ -542,7 +542,7 @@ components, you may create a <code>components</code> package instead.</p>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span><span class="p">,</span> <span class="n">div</span><span class="p">,</span> <span class="n">h5</span><span class="p">,</span> <span class="n">span</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">def</span> <span class="nf">bs_modal</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">footer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">def</span> <span class="nf">bootstrap_modal</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">footer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">return</span> <span class="n">div</span><span class="p">(</span><span class="s2">&quot;.modal&quot;</span><span class="p">,</span> <span class="n">tabindex</span><span class="o">=</span><span class="s2">&quot;-1&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;dialog&quot;</span><span class="p">)[</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">div</span><span class="p">(</span><span class="s2">&quot;.modal-dialog&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;document&quot;</span><span class="p">)[</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="n">div</span><span class="p">(</span><span class="s2">&quot;.modal-content&quot;</span><span class="p">)[</span>

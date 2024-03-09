@@ -277,45 +277,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#static-types" class="md-nav__link">
+  <a href="#leverage-static-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Static types
+      Leverage static types
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debugging" class="md-nav__link">
+  <a href="#great-debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      Debugging
+      Great debugging
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tooling" class="md-nav__link">
+  <a href="#automatic-code-formatting" class="md-nav__link">
     <span class="md-ellipsis">
-      Tooling
+      Automatic code formatting
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#extending" class="md-nav__link">
+  <a href="#easy-to-extend" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending
+      Easy to extend
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-componentspartials" class="md-nav__link">
+  <a href="#creating-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating components/partials
+      Creating components
     </span>
   </a>
   
@@ -480,45 +480,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#static-types" class="md-nav__link">
+  <a href="#leverage-static-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Static types
+      Leverage static types
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debugging" class="md-nav__link">
+  <a href="#great-debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      Debugging
+      Great debugging
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tooling" class="md-nav__link">
+  <a href="#automatic-code-formatting" class="md-nav__link">
     <span class="md-ellipsis">
-      Tooling
+      Automatic code formatting
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#extending" class="md-nav__link">
+  <a href="#easy-to-extend" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending
+      Easy to extend
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-componentspartials" class="md-nav__link">
+  <a href="#creating-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating components/partials
+      Creating components
     </span>
   </a>
   
@@ -559,45 +559,77 @@
 <p><img src="assets/htpy.webp" style="max-width: 300px; margin: 0 auto 60px auto; display: block;"></p>
 <h1 id="htpy-html-in-python">htpy - HTML in Python</h1>
 <p>htpy is a library that makes writing HTML in Python fun and efficient,
-without the need for a template language:</p>
-<div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">html</span><span class="p">,</span> <span class="n">head</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">h1</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">html</span><span class="p">[</span><span class="n">head</span><span class="p">[</span><span class="n">title</span><span class="p">[</span><span class="s2">&quot;Hello htpy&quot;</span><span class="p">]],</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;hi!&quot;</span><span class="p">]])</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Hello htpy&lt;/title&gt;&lt;/head&gt;&lt;body&gt;hi!&lt;/body&gt;&lt;/html&gt;</span>
+without the need for a template language.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Define HTML elements in Python...</strong></p>
+<hr />
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">html</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">img</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">is_cool</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">html</span><span class="p">[</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="n">body</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;cool&quot;</span><span class="p">:</span> <span class="n">is_cool</span><span class="p">})[</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">h1</span><span class="p">(</span><span class="s2">&quot;#hi&quot;</span><span class="p">)[</span><span class="s2">&quot;Welcome to htpy!&quot;</span><span class="p">],</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">img</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;cat.jpg&quot;</span><span class="p">),</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">]</span>
 </span></code></pre></div>
+</li>
+<li>
+<p><strong>...and render it as HTML.</strong></p>
+<hr />
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;!doctype html&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cool&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;hi&quot;</span><span class="p">&gt;</span>Welcome to htpy!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cat.jpg&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
 <h2 id="introduction">Introduction</h2>
 <p>At <a href="https://personalkollen.se/start/">Personalkollen</a>, where htpy was originally
 developed we often found ourselves hitting walls when using classic templates.
 htpy was created to improve the productiveness and experience of generating HTML
 from a Python backend.</p>
-<h3 id="static-types">Static types</h3>
+<h3 id="leverage-static-types">Leverage static types</h3>
 <p>We have been increasing static type coverage and seen great effects of static
 typing. But when it comes to HTML produced by templates, after the template
 context is created, static type checkers hit a wall. This looses a lot of the
 value of using a type checker since a lot of the code that use domain
 specific objects cannot be checked.</p>
-<h3 id="debugging">Debugging</h3>
+<h3 id="great-debugging">Great debugging</h3>
 <p>Debugging a template system can be hard. The stack traces are often cryptic and
 hides the real culprit of a problem. Inspecting/debugging the template context
 is not possible without special tooling or debuggers. Debugging code written
 with htpy works with any Python debugger and gives usable stack traces.</p>
-<h3 id="tooling">Tooling</h3>
-<p>We are big fans of black to format our code. There are formatters that
-formats templates but we have found them lacking compared to tools like black.</p>
 <p>Many editors provide "goto definition". These often does not work reliably with
 templates.</p>
-<h3 id="extending">Extending</h3>
+<h3 id="automatic-code-formatting">Automatic code formatting</h3>
+<p>Black is a very popular code formatter for Python. There are formatters that
+formats templates but we have found them lacking compared to tools like Black.</p>
+<h3 id="easy-to-extend">Easy to extend</h3>
 <p>Extending a template system with custom tags and filters requires learning about
 the template system parser and tokenizer, rather than just writing plain Python
 functions. Adding even a trivial filter requires putting the function in a
 specific location and registering the filter with the template library. Filters
 and tags with htpy are just plain Python functions.</p>
-<h3 id="creating-componentspartials">Creating components/partials</h3>
+<h3 id="creating-components">Creating components</h3>
 <p>Creating components/partials is typically done with includes or inclusion tags
 in a template language. With htpy, components/partials can be plain Python
 variables or functions. Making it easy to create partials and components makes
-it easier to maintain a library of components/partials.</p>
+it easier to maintain a library of components/partials. See <a href="common-patterns/#ui-components">UI components</a> for more information.</p>
 <h3 id="familiar-concepts">Familiar concepts</h3>
-<p>React/JSX has popularized the idea of using a programming language rather than a separate template language. The concept of building a tree of components and composing them with regular modules/classes/functions should be familiar to anyone with React/JSX experience.</p>
+<p>React/JSX has popularized the idea of using a programming language rather than a
+separate template language. The concept of building a tree of components and
+composing them with regular modules/classes/functions should be familiar to
+anyone with React/JSX experience.</p>
 
 
 

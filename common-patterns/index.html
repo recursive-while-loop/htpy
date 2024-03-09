@@ -383,6 +383,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -478,7 +498,7 @@ components, you may create a <code>components</code> package instead.</p>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">))</span>
 </span></code></pre></div>
 <div class="language-py highlight"><span class="filename">components.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">html</span><span class="p">[</span><span class="n">body</span><span class="p">[</span><span class="s2">&quot;hi </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="p">]]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">html</span><span class="p">[</span><span class="n">body</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;hi </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">]]</span>
 </span></code></pre></div>
 <h2 id="creating-a-base-layout">Creating a base layout</h2>
 <p>A common feature of template languages is to "extend" a base/parent template and specify placeholders. This can be achieved with a <code>base_layout</code> function:</p>

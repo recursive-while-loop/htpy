@@ -367,9 +367,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#does-not-generating-html-from-python-means-that-mixing-up-concerns-between-presentation-and-business-logic" class="md-nav__link">
+  <a href="#does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic" class="md-nav__link">
     <span class="md-ellipsis">
-      Does not generating HTML from Python means that mixing up concerns between presentation and business logic?
+      Does not generating HTML from Python mean mixing concerns between presentation and business logic?
     </span>
   </a>
   
@@ -385,9 +385,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angel-brackets-like-pyxl-and-jsx" class="md-nav__link">
+  <a href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx" class="md-nav__link">
     <span class="md-ellipsis">
-      Why does htpy not provide HTML like tag syntax with angel brackets like pyxl and JSX?
+      Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?
     </span>
   </a>
   
@@ -466,9 +466,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#does-not-generating-html-from-python-means-that-mixing-up-concerns-between-presentation-and-business-logic" class="md-nav__link">
+  <a href="#does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic" class="md-nav__link">
     <span class="md-ellipsis">
-      Does not generating HTML from Python means that mixing up concerns between presentation and business logic?
+      Does not generating HTML from Python mean mixing concerns between presentation and business logic?
     </span>
   </a>
   
@@ -484,9 +484,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angel-brackets-like-pyxl-and-jsx" class="md-nav__link">
+  <a href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx" class="md-nav__link">
     <span class="md-ellipsis">
-      Why does htpy not provide HTML like tag syntax with angel brackets like pyxl and JSX?
+      Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?
     </span>
   </a>
   
@@ -519,7 +519,7 @@
 <p>No. Generating XML/XHTML is out of scope for this project. Use a XML library if
 you are looking to generate XML.</p>
 <p>htpy generates HTML, therefore "void elements" such as <code>&lt;br&gt;</code> does not include a trailing <code>/</code>.</p>
-<h2 id="does-not-generating-html-from-python-means-that-mixing-up-concerns-between-presentation-and-business-logic">Does not generating HTML from Python means that mixing up concerns between presentation and business logic?</h2>
+<h2 id="does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic">Does not generating HTML from Python mean mixing concerns between presentation and business logic?</h2>
 <p>With a template language, create HTML markup in separate files is enforced by
 design. Avoiding logic in the presentation layer is also mostly done by making
 the language very restrictive.</p>
@@ -529,7 +529,7 @@ patterns</a> for more details on how you can structure your
 project.</p>
 <h2 id="what-kind-of-black-magic-makes-from-htpy-import-whatever_element-work">What kind of black magic makes <code>from htpy import whatever_element</code> work?</h2>
 <p>htpy uses the <a href="https://docs.python.org/3/reference/datamodel.html#customizing-module-attribute-access">module level <code>__getattr__</code></a>. It was <a href="https://docs.python.org/3/whatsnew/3.7.html#pep-562-customization-of-access-to-module-attributes">introduced in Python 3.7</a>. It allows <a href="https://github.com/pelme/htpy/blob/855a2a6648ce955be9730fe030a97930df42930a/htpy/__init__.py#L146-L147">creating <code>Element</code> instances</a> for any elements that are imported.</p>
-<h2 id="why-does-htpy-not-provide-html-like-tag-syntax-with-angel-brackets-like-pyxl-and-jsx">Why does htpy not provide HTML like tag syntax with angel brackets like pyxl and JSX?</h2>
+<h2 id="why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx">Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?</h2>
 <p>htpy must be compatible with standard Python code formatters, editors and static
 type checkers. Unfortunately, it is not possible to support those workflows with a custom
 syntax without a massive effort to change those tools to support that syntax.</p>

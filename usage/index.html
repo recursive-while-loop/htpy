@@ -816,7 +816,7 @@ library. markupsafe is a dependency of htpy and is automatically installed:</p>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">&lt;img src=&quot;picture.jpg&quot;&gt;</span>
 </span></code></pre></div>
 <p>In Python, <code>class</code> and <code>for</code> cannot be used as keyword arguments. Instead, they can be specified as <code>class_</code> or <code>for_</code> when using keyword arguments:</p>
-<div class="language-pycon highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">img</span>
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">label</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="n">for_</span><span class="o">=</span><span class="s2">&quot;myfield&quot;</span><span class="p">))</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">&lt;label for=&quot;myfield&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
@@ -825,7 +825,6 @@ library. markupsafe is a dependency of htpy and is automatically installed:</p>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">form</span><span class="p">(</span><span class="n">hx_post</span><span class="o">=</span><span class="s2">&quot;/foo&quot;</span><span class="p">))</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">&lt;form hx-post=&quot;/foo&quot;&gt;&lt;/form&gt;</span>
 </span></code></pre></div></p>
-<p>If you need attributes</p>
 <h3 id="idclass-shorthand">id/class shorthand</h3>
 <p>Defining <code>id</code> and <code>class</code> attributes is common when writing HTML. A string shorthand
 that looks like a CSS selector can be used to quickly define id and classes:</p>

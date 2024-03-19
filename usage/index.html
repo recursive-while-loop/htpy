@@ -435,6 +435,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#iterating-of-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating of the output
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -455,6 +464,26 @@
   
   <span class="md-ellipsis">
     Common patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../static-typing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static typing
   </span>
   
 
@@ -696,6 +725,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#iterating-of-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating of the output
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -883,6 +921,20 @@ accepts a list of class names or a dict. Falsey values will be ignored.</p>
 <div class="language-pycon highlight"><span class="filename">Specifying attribute via multiple arguments</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htyp</span> <span class="kn">import</span> <span class="n">label</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="s2">&quot;somefield&quot;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;myname&quot;</span><span class="p">,))</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">&lt;label id=&quot;myid&quot; class=&quot;foo bar&quot; for=&quot;somefield&quot; name=&quot;myname&quot;&gt;&lt;/label&gt;</span>
+</span></code></pre></div>
+<h2 id="iterating-of-the-output">Iterating of the output</h2>
+<p>Iterating over a htpy element will yield the resulting contents in chunks as
+they are rendered:</p>
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">ul</span><span class="p">[</span><span class="n">li</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]]:</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;got a chunk: </span><span class="si">{</span><span class="n">chunk</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="gp">...</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="go">got a chunk: &#39;&lt;ul&gt;&#39;</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="go">got a chunk: &#39;&lt;li&gt;&#39;</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="go">got a chunk: &#39;a&#39;</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="go">got a chunk: &#39;b&#39;</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="go">got a chunk: &#39;&lt;/li&gt;&#39;</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="go">got a chunk: &#39;&lt;/ul&gt;&#39;</span>
 </span></code></pre></div>
 
 

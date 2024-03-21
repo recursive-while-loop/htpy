@@ -390,6 +390,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../streaming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Streaming of contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
         
   
@@ -495,7 +515,9 @@
 
 
 <h1 id="static-typing">Static typing</h1>
-<p>htpy was designed to be used with a typed code base. Since you define all your own data/components with regular Python, a static type checker like mypy will catch errors like this:</p>
+<p>htpy was designed to be used with static typing. Since you define all your own
+data/components with regular Python, a static type checker like mypy will catch
+errors like this:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
@@ -514,7 +536,7 @@
 all regular HTML elements that can have children such as <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> and
 <code>&lt;table&gt;</code>. <code>VoidElement</code> are <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">HTML void
 element</a> which
-cannot have children.</p>
+cannot have children such as <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code> and <code>&lt;br&gt;</code>.</p>
 <p>Use <code>Element</code> as the return type when you want to always return an element.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>

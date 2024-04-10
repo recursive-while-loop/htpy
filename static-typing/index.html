@@ -191,7 +191,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="htpy - HTML in Python" class="md-nav__button md-logo" aria-label="htpy - HTML in Python" data-md-component="logo">
       
@@ -450,59 +452,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#autocompletion-of-html-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Autocompletion of HTML elements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-and-voidelement-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Element and VoidElement classes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Node
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -514,7 +463,7 @@
   
 
 
-<h1 id="static-typing">Static typing</h1>
+<h1 id="static-typing">Static typing<a class="headerlink" href="#static-typing" title="Permanent link">&para;</a></h1>
 <p>htpy was designed to be used with static typing. Since you define all your own
 data/components with regular Python, a static type checker like mypy will catch
 errors like this:</p>
@@ -528,10 +477,10 @@ errors like this:</p>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">#                        ^^^^^^^^^^</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># mypy: error: &quot;User&quot; has no attribute &quot;first_name&quot;  [attr-defined]</span>
 </span></code></pre></div>
-<h2 id="autocompletion-of-html-elements">Autocompletion of HTML elements</h2>
+<h2 id="autocompletion-of-html-elements">Autocompletion of HTML elements<a class="headerlink" href="#autocompletion-of-html-elements" title="Permanent link">&para;</a></h2>
 <p>htpy ships with type annotations for all HTML elements. If your editor supports it, it will show you useful auto completions:</p>
 <p><img alt="Screenshot of autocomplete in VS Code." src="../assets/autocomplete.webp" title="Using autocomplete in VS Code." /></p>
-<h2 id="element-and-voidelement-classes"><code>Element</code> and <code>VoidElement</code> classes</h2>
+<h2 id="element-and-voidelement-classes"><code>Element</code> and <code>VoidElement</code> classes<a class="headerlink" href="#element-and-voidelement-classes" title="Permanent link">&para;</a></h2>
 <p>The base types/classes in htpy are <code>Element</code> and <code>VoidElement</code>. <code>Element</code> are
 all regular HTML elements that can have children such as <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> and
 <code>&lt;table&gt;</code>. <code>VoidElement</code> are <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">HTML void
@@ -549,7 +498,7 @@ cannot have children such as <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Element</span><span class="p">:</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="k">return</span> <span class="n">span</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;.badge.text-bg-</span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)[</span><span class="n">text</span><span class="p">]</span>
 </span></code></pre></div>
-<h2 id="node">Node</h2>
+<h2 id="node">Node<a class="headerlink" href="#node" title="Permanent link">&para;</a></h2>
 <p><code>Node</code> is a type alias for all possible objects that can be used as a child
 node. <a href="https://github.com/pelme/htpy/blob/09b43444fc2c6ebcf6b8070ef5ac1d2fa0d1901b/htpy/__init__.pyi#L13">See the source for the exact
 definition</a>
@@ -608,7 +557,7 @@ or callables.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>

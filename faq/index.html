@@ -191,7 +191,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="htpy - HTML in Python" class="md-nav__button md-logo" aria-label="htpy - HTML in Python" data-md-component="logo">
       
@@ -468,77 +470,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-htpy-performance-compare-to-django-or-jinja-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      How does htpy performance compare to Django or Jinja templates?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-htpy-generate-xmlxhtml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Can htpy generate XML/XHTML?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Does not generating HTML from Python mean mixing concerns between presentation and business logic?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-kind-of-black-magic-makes-from-htpy-import-whatever_element-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      What kind of black magic makes from htpy import whatever_element work?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -550,17 +481,17 @@
   
 
 
-<h1 id="faq">FAQ</h1>
-<h2 id="how-does-htpy-performance-compare-to-django-or-jinja-templates">How does htpy performance compare to Django or Jinja templates?</h2>
+<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="how-does-htpy-performance-compare-to-django-or-jinja-templates">How does htpy performance compare to Django or Jinja templates?<a class="headerlink" href="#how-does-htpy-performance-compare-to-django-or-jinja-templates" title="Permanent link">&para;</a></h2>
 <p>The performance of HTML rendering is rarely the bottleneck in most web application. It is usually fast enough regardless of what method of constructing the HTML is being used.</p>
 <p>Given that it has been fast enough, there has not been much effort in optimizing htpy. It should be possible to significantly increase the effectiveness and we are open to contributions with benchmarks and speed improvements.</p>
 <p>That said, htpy is currently on par with Django templates when it comes to speed. Jinja2 is currently significantly faster than both Django templates and htpy. There is a <a href="https://github.com/pelme/htpy/blob/855a2a6648ce955be9730fe030a97930df42930a/scripts/benchmark_big_table.py">small benchmark script</a> in the repo that generates a table with 50 000 rows.</p>
-<h2 id="can-htpy-generate-xmlxhtml">Can htpy generate XML/XHTML?</h2>
+<h2 id="can-htpy-generate-xmlxhtml">Can htpy generate XML/XHTML?<a class="headerlink" href="#can-htpy-generate-xmlxhtml" title="Permanent link">&para;</a></h2>
 <p>No. Generating XML/XHTML is out of scope for this project. Use a XML library if
 you are looking to generate XML.</p>
 <p>htpy generates HTML, therefore "void elements" such as <code>&lt;br&gt;</code> does not include a trailing <code>/</code>.</p>
 <p>If you are looking to generate generic XML, <a href="https://lxml.de/apidoc/lxml.builder.html"><code>lxml.builder</code></a> could be a good alternative.</p>
-<h2 id="does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic">Does not generating HTML from Python mean mixing concerns between presentation and business logic?</h2>
+<h2 id="does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic">Does not generating HTML from Python mean mixing concerns between presentation and business logic?<a class="headerlink" href="#does-not-generating-html-from-python-mean-mixing-concerns-between-presentation-and-business-logic" title="Permanent link">&para;</a></h2>
 <p>With a template language, create HTML markup in separate files is enforced by
 design. Avoiding logic in the presentation layer is also mostly done by making
 the language very restrictive.</p>
@@ -568,9 +499,9 @@ the language very restrictive.</p>
 nicely separated presentation layer that is free from logic. See <a href="../common-patterns/">Common
 patterns</a> for more details on how you can structure your
 project.</p>
-<h2 id="what-kind-of-black-magic-makes-from-htpy-import-whatever_element-work">What kind of black magic makes <code>from htpy import whatever_element</code> work?</h2>
+<h2 id="what-kind-of-black-magic-makes-from-htpy-import-whatever_element-work">What kind of black magic makes <code>from htpy import whatever_element</code> work?<a class="headerlink" href="#what-kind-of-black-magic-makes-from-htpy-import-whatever_element-work" title="Permanent link">&para;</a></h2>
 <p>htpy uses the <a href="https://docs.python.org/3/reference/datamodel.html#customizing-module-attribute-access">module level <code>__getattr__</code></a>. It was <a href="https://docs.python.org/3/whatsnew/3.7.html#pep-562-customization-of-access-to-module-attributes">introduced in Python 3.7</a>. It allows <a href="https://github.com/pelme/htpy/blob/855a2a6648ce955be9730fe030a97930df42930a/htpy/__init__.py#L146-L147">creating <code>Element</code> instances</a> for any elements that are imported.</p>
-<h2 id="why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx">Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?</h2>
+<h2 id="why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx">Why does htpy not provide HTML like tag syntax with angle brackets like pyxl and JSX?<a class="headerlink" href="#why-does-htpy-not-provide-html-like-tag-syntax-with-angle-brackets-like-pyxl-and-jsx" title="Permanent link">&para;</a></h2>
 <p>htpy must be compatible with standard Python code formatters, editors and static
 type checkers. Unfortunately, it is not possible to support those workflows with a custom
 syntax without a massive effort to change those tools to support that syntax.</p>
@@ -620,7 +551,7 @@ syntax without a massive effort to change those tools to support that syntax.</p
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>

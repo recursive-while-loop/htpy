@@ -191,7 +191,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="htpy - HTML in Python" class="md-nav__button md-logo" aria-label="htpy - HTML in Python" data-md-component="logo">
       
@@ -579,188 +581,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Elements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#textstrings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text/strings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditional-rendering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional rendering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loops-iterating-over-children" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loops / iterating over children
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-elements-web-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom elements / web components
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#injecting-markup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Injecting markup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#html-doctype" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTML Doctype
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attributes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Attributes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#elements-without-attributes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elements without attributes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keyword-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keyword arguments
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#idclass-shorthand" class="md-nav__link">
-    <span class="md-ellipsis">
-      id/class shorthand
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#attributes-as-dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attributes as dict
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boolean-attributes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boolean attributes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditionally-mixing-css-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditionally mixing CSS classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combining-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Combining modes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iterating-of-the-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iterating of the output
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -772,20 +592,20 @@
   
 
 
-<h1 id="usage">Usage</h1>
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
 <p>Elements are imported directly from the <code>htpy</code> module as their name. HTML attributes are specified by parenthesis (<code>()</code> / "call"). Children are specified using square brackets (<code>[]</code> / "getitem").</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;hi&quot;</span><span class="p">)[</span><span class="s2">&quot;Hello!&quot;</span><span class="p">])</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">&lt;div id=&quot;hi&quot;&gt;Hello!&lt;/div&gt;</span>
 </span></code></pre></div>
-<h2 id="elements">Elements</h2>
+<h2 id="elements">Elements<a class="headerlink" href="#elements" title="Permanent link">&para;</a></h2>
 <p>Children can be strings, markup, other elements or lists/iterators.</p>
 <p>Elements can be arbitrarily nested:
 <div class="language-pycon highlight"><span class="filename">Nested elements</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">article</span><span class="p">,</span> <span class="n">section</span><span class="p">,</span> <span class="n">p</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">section</span><span class="p">[</span><span class="n">article</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="s2">&quot;Lorem ipsum&quot;</span><span class="p">]]])</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="go">&lt;section&gt;&lt;article&gt;&lt;p&gt;Lorem ipsum&lt;/p&gt;&lt;/article&gt;&lt;/section&gt;</span>
 </span></code></pre></div></p>
-<h3 id="textstrings">Text/strings</h3>
+<h3 id="textstrings">Text/strings<a class="headerlink" href="#textstrings" title="Permanent link">&para;</a></h3>
 <p>It is possible to pass a string directly:
 <div class="language-pycon highlight"><span class="filename">Using a string as children</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">h1</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">h1</span><span class="p">[</span><span class="s2">&quot;Welcome to my site!&quot;</span><span class="p">])</span>
@@ -799,7 +619,7 @@ and safe to directly insert variable data via f-strings:</p>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">h1</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;hello </span><span class="si">{</span><span class="n">user_supplied_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">])</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">&lt;h1&gt;hello bobby &amp;lt;/h1&amp;gt;&lt;/h1&gt;</span>
 </span></code></pre></div>
-<h3 id="conditional-rendering">Conditional rendering</h3>
+<h3 id="conditional-rendering">Conditional rendering<a class="headerlink" href="#conditional-rendering" title="Permanent link">&para;</a></h3>
 <p><code>None</code> will not render anything. This can be useful to conditionally render some content.</p>
 <div class="language-pycon highlight"><span class="filename">Conditional rendering</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span><span class="p">,</span> <span class="n">b</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">error</span> <span class="o">=</span> <span class="kc">None</span>
@@ -816,7 +636,7 @@ and safe to directly insert variable data via f-strings:</p>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="k">if</span> <span class="n">error</span> <span class="k">else</span> <span class="kc">None</span><span class="p">])</span>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="go">&lt;div&gt;&lt;b&gt;Enter a valid email address.&lt;/b&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<h3 id="loops-iterating-over-children">Loops / iterating over children</h3>
+<h3 id="loops-iterating-over-children">Loops / iterating over children<a class="headerlink" href="#loops-iterating-over-children" title="Permanent link">&para;</a></h3>
 <p>You can pass a list, tuple or generator to generate multiple children:</p>
 <div class="language-pycon highlight"><span class="filename">Iterate over a generator</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ul</span><span class="p">[(</span><span class="n">li</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;abc&quot;</span><span class="p">)])</span>
@@ -834,7 +654,7 @@ more information.</p>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">my_images</span><span class="p">])</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="go">&lt;div&gt;&lt;img src=&quot;a.jpg&quot;&gt;&lt;img src=&quot;b.jpg&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<h3 id="custom-elements-web-components">Custom elements / web components</h3>
+<h3 id="custom-elements-web-components">Custom elements / web components<a class="headerlink" href="#custom-elements-web-components" title="Permanent link">&para;</a></h3>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Custom elements / web
 components</a>
 are HTML elements that contains at least one dash (<code>-</code>). Since <code>-</code> cannot be
@@ -843,7 +663,7 @@ used in Python identifiers, use underscore (<code>_</code>) instead:</p>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_custom_element</span><span class="p">[</span><span class="s1">&#39;hi!&#39;</span><span class="p">])</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">&lt;my-custom-element&gt;hi!&lt;/my-custom-element&gt;</span>
 </span></code></pre></div>
-<h3 id="injecting-markup">Injecting markup</h3>
+<h3 id="injecting-markup">Injecting markup<a class="headerlink" href="#injecting-markup" title="Permanent link">&para;</a></h3>
 <p>If you have HTML markup that you want to insert without further escaping, wrap
 it in <code>Markup</code> from the <a href="https://markupsafe.palletsprojects.com/">markupsafe</a>
 library. markupsafe is a dependency of htpy and is automatically installed:</p>
@@ -859,21 +679,21 @@ library. markupsafe is a dependency of htpy and is automatically installed:</p>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">[</span><span class="n">Markup</span><span class="p">(</span><span class="n">markdown</span><span class="p">(</span><span class="s1">&#39;# Hi&#39;</span><span class="p">))])</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="go">&lt;div&gt;&lt;h1&gt;Hi&lt;/h1&gt;&lt;/div&gt;</span>
 </span></code></pre></div></p>
-<h3 id="html-doctype">HTML Doctype</h3>
+<h3 id="html-doctype">HTML Doctype<a class="headerlink" href="#html-doctype" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype">HTML doctype</a> is automatically prepended to the <code>&lt;html&gt;</code> tag:</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">html</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="go">&lt;!doctype html&gt;&lt;html&gt;&lt;/html&gt;</span>
 </span></code></pre></div>
-<h2 id="attributes">Attributes</h2>
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
 <p>HTML attributes are defined by calling the element. They can be specified in a couple of different ways.</p>
-<h3 id="elements-without-attributes">Elements without attributes</h3>
+<h3 id="elements-without-attributes">Elements without attributes<a class="headerlink" href="#elements-without-attributes" title="Permanent link">&para;</a></h3>
 <p>Some elements do not have attributes, they can be specified by just the element itself:</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">hr</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">hr</span><span class="p">)</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">&lt;hr&gt;</span>
 </span></code></pre></div>
-<h3 id="keyword-arguments">Keyword arguments</h3>
+<h3 id="keyword-arguments">Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Permanent link">&para;</a></h3>
 <p>Attributes can be specified via keyword arguments:</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">img</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;picture.jpg&quot;</span><span class="p">))</span>
@@ -889,7 +709,7 @@ library. markupsafe is a dependency of htpy and is automatically installed:</p>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">form</span><span class="p">(</span><span class="n">hx_post</span><span class="o">=</span><span class="s2">&quot;/foo&quot;</span><span class="p">))</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">&lt;form hx-post=&quot;/foo&quot;&gt;&lt;/form&gt;</span>
 </span></code></pre></div></p>
-<h3 id="idclass-shorthand">id/class shorthand</h3>
+<h3 id="idclass-shorthand">id/class shorthand<a class="headerlink" href="#idclass-shorthand" title="Permanent link">&para;</a></h3>
 <p>Defining <code>id</code> and <code>class</code> attributes is common when writing HTML. A string shorthand
 that looks like a CSS selector can be used to quickly define id and classes:</p>
 <div class="language-pycon highlight"><span class="filename">Define id</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span>
@@ -904,7 +724,7 @@ that looks like a CSS selector can be used to quickly define id and classes:</p>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">))</span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">&lt;div id=&quot;myid&quot; class=&quot;foo bar&quot;&gt;&lt;/div&gt;</span>
 </span></code></pre></div>
-<h3 id="attributes-as-dict">Attributes as dict</h3>
+<h3 id="attributes-as-dict">Attributes as dict<a class="headerlink" href="#attributes-as-dict" title="Permanent link">&para;</a></h3>
 <p>Attributes can also be specified as a <code>dict</code>. This is useful when using
 attributes that are reserved Python keywords (like <code>for</code> or <code>class</code>), when the
 attribute name contains a dash (<code>-</code>) or when you want to define attributes
@@ -917,7 +737,7 @@ dynamically.</p>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">({</span><span class="s2">&quot;for&quot;</span><span class="p">:</span> <span class="s2">&quot;myfield&quot;</span><span class="p">}))</span>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="go">&lt;label for=&quot;myfield&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
-<h3 id="boolean-attributes">Boolean attributes</h3>
+<h3 id="boolean-attributes">Boolean attributes<a class="headerlink" href="#boolean-attributes" title="Permanent link">&para;</a></h3>
 <p>In HTML, boolean attributes such as <code>disabled</code> are considered "true" when they
 exist. Specifying an attribute as <code>True</code> will make it appear (without a value).
 <code>False</code> will make it hidden. This is useful and brings the semantics of <code>bool</code> to
@@ -930,7 +750,7 @@ HTML.</p>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">&lt;button&gt;&lt;/button&gt;</span>
 </span></code></pre></div>
-<h3 id="conditionally-mixing-css-classes">Conditionally mixing CSS classes</h3>
+<h3 id="conditionally-mixing-css-classes">Conditionally mixing CSS classes<a class="headerlink" href="#conditionally-mixing-css-classes" title="Permanent link">&para;</a></h3>
 <p>To make it easier to mix CSS classes, the <code>class</code> attribute
 accepts a list of class names or a dict. Falsey values will be ignored.</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
@@ -942,13 +762,13 @@ accepts a list of class names or a dict. Falsey values will be ignored.</p>
 </span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="go">&lt;button class=&quot;btn&quot;&gt;&lt;/button&gt;</span>
 </span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="gp">&gt;&gt;&gt;</span>
 </span></code></pre></div>
-<h3 id="combining-modes">Combining modes</h3>
+<h3 id="combining-modes">Combining modes<a class="headerlink" href="#combining-modes" title="Permanent link">&para;</a></h3>
 <p>Attributes via id/class shorthand, keyword arguments and dictionary can be combined:</p>
 <div class="language-pycon highlight"><span class="filename">Specifying attribute via multiple arguments</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htyp</span> <span class="kn">import</span> <span class="n">label</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="s2">&quot;somefield&quot;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;myname&quot;</span><span class="p">,))</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">&lt;label id=&quot;myid&quot; class=&quot;foo bar&quot; for=&quot;somefield&quot; name=&quot;myname&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
-<h2 id="iterating-of-the-output">Iterating of the output</h2>
+<h2 id="iterating-of-the-output">Iterating of the output<a class="headerlink" href="#iterating-of-the-output" title="Permanent link">&para;</a></h2>
 <p>Iterating over a htpy element will yield the resulting contents in chunks as
 they are rendered:</p>
 <div class="language-pycon highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
@@ -1008,7 +828,7 @@ they are rendered:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>

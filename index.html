@@ -296,6 +296,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      The syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -558,6 +567,11 @@ Python to organize your components. This gives you a lot of power and makes htpy
 scale from a single small Flask project to bigger applications.</p>
 <p><a href="https://htpy.dev/common-patterns/">Common patterns</a> can give you some ideas
 that you can build upon yourself.</p>
+<h2 id="the-syntax">The syntax<a class="headerlink" href="#the-syntax" title="Permanent link">&para;</a></h2>
+<p>Child elements are specified using the <code>[]</code> syntax. This may look strange at
+first but it has some nice benefits. This clearly separates attributes from
+children elements and makes the code more readable. It is implemented using the
+<code>__getitem__</code> method, just like lists or dicts.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p><a href="https://pypi.org/project/htpy/">htpy is available on PyPI</a>. You may install the latest version using pip:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install htpy

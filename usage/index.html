@@ -432,6 +432,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#escaping-of-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping of Attributes
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -788,19 +797,40 @@ accepts a list of class names or a dict. Falsey values will be ignored.</p>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">(</span><span class="s2">&quot;#myid.foo.bar&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="s2">&quot;somefield&quot;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;myname&quot;</span><span class="p">,))</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">&lt;label id=&quot;myid&quot; class=&quot;foo bar&quot; for=&quot;somefield&quot; name=&quot;myname&quot;&gt;&lt;/label&gt;</span>
 </span></code></pre></div>
+<h3 id="escaping-of-attributes">Escaping of Attributes<a class="headerlink" href="#escaping-of-attributes" title="Permanent link">&para;</a></h3>
+<p>Attributes are always escaped. This makes it possible to pass arbitrary HTML
+fragments or scripts as attributes. The output may look a bit obfuscated since
+all unsafe characters are escaped but the browser will interpret it correctly:</p>
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">button</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">&quot;let name = &#39;andreas&#39;; alert(&#39;hi&#39; + name);&quot;</span><span class="p">)[</span><span class="s2">&quot;Say hi&quot;</span><span class="p">])</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">&lt;button onclick=&quot;let name = &amp;#39;andreas&amp;#39;; alert(&amp;#39;hi&amp;#39; + name);&quot;&gt;Say hi&lt;/button&gt;</span>
+</span></code></pre></div>
+<p>In the browser, the parsed attribute as returned by
+<code>document.getElementById("example").getAttribute("onclick")</code> will be the
+original string <code>let name = 'andreas'; alert('hi' + name);</code>.</p>
+<p>Escaping will happen whether or not the value is wrapped in <code>markupsafe.Markup</code>
+or not. This may seem confusing at first but is useful when embedding HTML
+snippets as attributes:</p>
+<div class="language-pycon highlight"><span class="filename">Escaping of Markup</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">markupsafe</span> <span class="kn">import</span> <span class="n">Markup</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="c1"># This markup may come from another library/template engine</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">some_markup</span> <span class="o">=</span> <span class="n">Markup</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;li class=&quot;bar&quot;&gt;&lt;/li&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ul</span><span class="p">(</span><span class="n">data_li_template</span><span class="o">=</span><span class="n">some_markup</span><span class="p">))</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="go">&lt;ul data-li-template=&quot;&amp;lt;li class=&amp;#34;bar&amp;#34;&amp;gt;&amp;lt;/li&amp;gt;&quot;&gt;&lt;/ul&gt;</span>
+</span></code></pre></div>
 <h2 id="iterating-of-the-output">Iterating of the Output<a class="headerlink" href="#iterating-of-the-output" title="Permanent link">&para;</a></h2>
 <p>Iterating over a htpy element will yield the resulting contents in chunks as
 they are rendered:</p>
-<div class="language-pycon highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">ul</span><span class="p">[</span><span class="n">li</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]]:</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;got a chunk: </span><span class="si">{</span><span class="n">chunk</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="gp">...</span>
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="go">got a chunk: &#39;&lt;ul&gt;&#39;</span>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="go">got a chunk: &#39;&lt;li&gt;&#39;</span>
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="go">got a chunk: &#39;a&#39;</span>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="go">got a chunk: &#39;b&#39;</span>
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="go">got a chunk: &#39;&lt;/li&gt;&#39;</span>
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="go">got a chunk: &#39;&lt;/ul&gt;&#39;</span>
+<div class="language-pycon highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">ul</span><span class="p">[</span><span class="n">li</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]]:</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;got a chunk: </span><span class="si">{</span><span class="n">chunk</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="gp">...</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="go">got a chunk: &#39;&lt;ul&gt;&#39;</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="go">got a chunk: &#39;&lt;li&gt;&#39;</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="go">got a chunk: &#39;a&#39;</span>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="go">got a chunk: &#39;b&#39;</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="go">got a chunk: &#39;&lt;/li&gt;&#39;</span>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="go">got a chunk: &#39;&lt;/ul&gt;&#39;</span>
 </span></code></pre></div>
 
 

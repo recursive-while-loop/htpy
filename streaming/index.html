@@ -20,7 +20,7 @@
     
     
       
-        <title>Streaming of contents - htpy - HTML in Python</title>
+        <title>Streaming of Contents - htpy - HTML in Python</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Streaming of contents
+              Streaming of Contents
             
           </span>
         </div>
@@ -269,7 +269,7 @@
         
   
   <span class="md-ellipsis">
-    Common patterns
+    Common Patterns
   </span>
   
 
@@ -289,7 +289,7 @@
         
   
   <span class="md-ellipsis">
-    Static typing
+    Static Typing
   </span>
   
 
@@ -309,7 +309,7 @@
         
   
   <span class="md-ellipsis">
-    Usage with Django
+    Usage With Django
   </span>
   
 
@@ -338,7 +338,7 @@
           
   
   <span class="md-ellipsis">
-    Streaming of contents
+    Streaming of Contents
   </span>
   
 
@@ -349,7 +349,7 @@
         
   
   <span class="md-ellipsis">
-    Streaming of contents
+    Streaming of Contents
   </span>
   
 
@@ -373,7 +373,7 @@
         <li class="md-nav__item">
   <a href="#using-generators-and-callables-as-children" class="md-nav__link">
     <span class="md-ellipsis">
-      Using generators and callables as children
+      Using Generators and Callables as Children
     </span>
   </a>
   
@@ -382,7 +382,7 @@
         <li class="md-nav__item">
   <a href="#using-callables-to-delay-evalutation" class="md-nav__link">
     <span class="md-ellipsis">
-      Using callables to delay evalutation
+      Using Callables to Delay Evalutation
     </span>
   </a>
   
@@ -407,7 +407,7 @@
         
   
   <span class="md-ellipsis">
-    Convert HTML to htpy code
+    Convert HTML to htpy Code
   </span>
   
 
@@ -474,7 +474,7 @@
   
 
 
-<h1 id="streaming-of-contents">Streaming of contents<a class="headerlink" href="#streaming-of-contents" title="Permanent link">&para;</a></h1>
+<h1 id="streaming-of-contents">Streaming of Contents<a class="headerlink" href="#streaming-of-contents" title="Permanent link">&para;</a></h1>
 <p>Internally, htpy is built with generators. Most of the time, you would render
 the full page with <code>str()</code>, but htpy can also incrementally generate pages which
 can then be streamed to the browser. If your page uses a database or other
@@ -490,6 +490,7 @@ improved user experience from faster pages/rendering.</p>
 </div>
 <p>This video shows what it looks like in the browser to generate a HTML table with <a href="https://docs.djangoproject.com/en/5.0/ref/request-response/#django.http.StreamingHttpResponse">Django StreamingHttpResponse</a> (<a href="https://github.com/pelme/htpy/blob/main/examples/djangoproject/stream/views.py">source code</a>):</p>
 <video width="500" controls loop >
+
   <source src="/assets/stream.webm" type="video/webm">
 </video>
 
@@ -498,12 +499,12 @@ streaming: The browser loads CSS and gradually shows the contents. By loading
 CSS files in the <code>&lt;head&gt;</code> tag before dynamic content, the browser can start
 working on loading the CSS and styling the page while the server keeps
 generating the rest of the page.</p>
-<h2 id="using-generators-and-callables-as-children">Using generators and callables as children<a class="headerlink" href="#using-generators-and-callables-as-children" title="Permanent link">&para;</a></h2>
+<h2 id="using-generators-and-callables-as-children">Using Generators and Callables as Children<a class="headerlink" href="#using-generators-and-callables-as-children" title="Permanent link">&para;</a></h2>
 <p>Django's querysets are <a href="https://docs.djangoproject.com/en/5.0/topics/db/queries/#querysets-are-lazy">lazily
 evaluated</a>.
 They will not execute a database query before their value is actually needed.</p>
 <p>This example shows how this property of Django querysets can be used to create a
-page that streams objects:
+page that streams objects:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">StreamingHttpResponse</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">ul</span><span class="p">,</span> <span class="n">li</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -513,8 +514,8 @@ page that streams objects:
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">return</span> <span class="n">StreamingHttpResponse</span><span class="p">(</span><span class="n">ul</span><span class="p">[</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">(</span><span class="n">li</span><span class="p">[</span><span class="n">article</span><span class="o">.</span><span class="n">title</span><span class="p">]</span> <span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">Article</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">])</span>
-</span></code></pre></div></p>
-<h2 id="using-callables-to-delay-evalutation">Using callables to delay evalutation<a class="headerlink" href="#using-callables-to-delay-evalutation" title="Permanent link">&para;</a></h2>
+</span></code></pre></div>
+<h2 id="using-callables-to-delay-evalutation">Using Callables to Delay Evalutation<a class="headerlink" href="#using-callables-to-delay-evalutation" title="Permanent link">&para;</a></h2>
 <p>Pass a callable that does not accept any arguements as child to delay the
 evaluation.</p>
 <p>This example shows how the page starts rendering and outputs the <code>&lt;h1&gt;</code> tag and
@@ -536,7 +537,7 @@ then calls <code>calculate_magic_number</code>.</p>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">element</span><span class="p">:</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Output:
+<p>Output:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;div&gt;
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;h1&gt;
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Welcome to my page
@@ -544,7 +545,7 @@ then calls <code>calculate_magic_number</code>.</p>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>The magic number is
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>42    # &lt;-- Appears after 3 seconds
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&lt;/div&gt;
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>You may use <code>lambda</code> to create a function without arguments to make a an expression lazy:</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">htpy</span> <span class="kn">import</span> <span class="n">div</span><span class="p">,</span> <span class="n">h1</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
